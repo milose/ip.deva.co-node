@@ -18,8 +18,7 @@ app.get('/', (req, res) => {
     return res.end(ip)
   }
 
-  res.setHeader('Content-Type', 'application/json')
-  return res.end(JSON.stringify({ ip }))
+  return res.json({ ip })
 })
 
 export default app
