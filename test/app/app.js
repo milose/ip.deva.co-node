@@ -12,7 +12,7 @@ describe('Test the root path', () => {
       .get('/')
       .expect('Content-Type', /json/)
       .then(response => {
-        expect(response.body.ip).toBe('::ffff:127.0.0.1')
+        expect(response.body.ip).toBe('127.0.0.1')
       })
   })
 
@@ -21,7 +21,7 @@ describe('Test the root path', () => {
       .get('/?text')
       .expect('Content-Type', /text/)
       .then(response => {
-        expect(response.text).toBe('::ffff:127.0.0.1')
+        expect(response.text).toBe('127.0.0.1')
       })
   })
 })
